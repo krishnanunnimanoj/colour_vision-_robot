@@ -1,0 +1,67 @@
+
+# Colour-Based Autonomous Navigation Robot
+
+A ROS 2 and Gazebo simulation project that detects the colour of an object using a robot-mounted camera and autonomously navigates towards its corresponding destination.
+
+## Project Overview
+
+The robot uses computer vision to identify coloured objects and selects a destination based on the detected colour. It uses LiDAR for obstacle detection and an Artificial Potential Field (APF) approach for navigation.
+
+## Features
+
+- Colour detection using OpenCV
+- Robot-mounted camera integration
+- Autonomous navigation using ROS 2
+- LiDAR-based obstacle detection and avoidance
+- Odometry-based robot positioning
+- Artificial Potential Field (APF) navigation
+- Automatic sample deletion after reaching the destination
+- Return-to-home functionality
+
+## Technologies Used
+
+- ROS 2 Humble
+- Gazebo Classic
+- Python
+- OpenCV
+- LiDAR
+- Odometry
+- Artificial Potential Field (APF)
+
+## Project Structure
+
+```text
+color_pillar_ws/
+├── src/
+│   ├── color_pillar_control/
+│   ├── color_pillar_description/
+│   └── color_pillar_vision/
+├── .gitignore
+└── README.md
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone YOUR_REPOSITORY_URL
+cd color_pillar_ws
+```
+
+Source ROS 2 Humble:
+
+```bash
+source /opt/ros/humble/setup.bash
+```
+
+Build the workspace:
+
+```bash
+colcon build
+source install/setup.bash
+```
+
+## Project Status
+
+Developed as a hands-on learning project to explore ROS 2, computer vision, sensor integration and autonomous mobile robot navigation.
