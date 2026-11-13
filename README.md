@@ -60,7 +60,38 @@ Build the workspace:
 ```bash
 colcon build
 source install/setup.bash
-```
+``
+##Running the Project
+
+Start the Gazebo simulation and robot using the project's launch file.
+
+Run the colour detection and navigation nodes in separate terminals after sourcing the workspace.
+
+Spawn a sample object:
+
+Red object
+
+ros2 run color_pillar_description spawn_object --color red
+
+Green object
+
+ros2 run color_pillar_description spawn_object --color green
+
+Blue object
+
+ros2 run color_pillar_description spawn_object --color blue
+
+Yellow object
+
+ros2 run color_pillar_description spawn_object --color yellow
+
+Return the robot home
+
+ros2 topic pub --once /return_home std_msgs/msg/Empty "{}"
+
+Note: Run the commands from terminals where the ROS 2 workspace has been sourced. Use the actual launch and node commands defined in the repository.
+
+`
 
 ## Project Status
 
