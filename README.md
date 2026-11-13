@@ -1,4 +1,3 @@
-
 # Colour-Based Autonomous Navigation Robot
 
 A ROS 2 and Gazebo simulation project that detects the colour of an object using a robot-mounted camera and autonomously navigates towards its corresponding destination.
@@ -21,7 +20,7 @@ The robot uses computer vision to identify coloured objects and selects a destin
 ## Technologies Used
 
 - ROS 2 Humble
-- Gazebo Classic
+- Gazebo Classic 11
 - Python
 - OpenCV
 - LiDAR
@@ -45,8 +44,8 @@ color_pillar_ws/
 Clone the repository:
 
 ```bash
-git clone YOUR_REPOSITORY_URL
-cd color_pillar_ws
+git clone https://github.com/krishnanunnimanoj/colour_vision-_robot.git
+cd colour_vision-_robot
 ```
 
 Source ROS 2 Humble:
@@ -60,38 +59,43 @@ Build the workspace:
 ```bash
 colcon build
 source install/setup.bash
-``
-##Running the Project
+```
+
+## Running the Project
 
 Start the Gazebo simulation and robot using the project's launch file.
 
 Run the colour detection and navigation nodes in separate terminals after sourcing the workspace.
 
-Spawn a sample object:
+### Spawn a Sample Object
 
-Red object
-
+**Red object**
+```bash
 ros2 run color_pillar_description spawn_object --color red
+```
 
-Green object
-
+**Green object**
+```bash
 ros2 run color_pillar_description spawn_object --color green
+```
 
-Blue object
-
+**Blue object**
+```bash
 ros2 run color_pillar_description spawn_object --color blue
+```
 
-Yellow object
-
+**Yellow object**
+```bash
 ros2 run color_pillar_description spawn_object --color yellow
+```
 
-Return the robot home
+### Return the Robot Home
 
+```bash
 ros2 topic pub --once /return_home std_msgs/msg/Empty "{}"
+```
 
-Note: Run the commands from terminals where the ROS 2 workspace has been sourced. Use the actual launch and node commands defined in the repository.
-
-`
+**Note:** Run the commands from terminals where the ROS 2 workspace has been sourced. Use the actual launch and node commands defined in the repository.
 
 ## Project Status
 
